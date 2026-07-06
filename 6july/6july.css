@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin : 0px;
+    padding :0px;
+
+}
+.flex-container,
+.flex-item-2{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    background-color:rgb(239, 242, 242);
+    }
+.flex-container{
+    padding :12px;
+    position:fixed;
+    width:100%;
+    box-shadow: 0px 4px 8px -2px black;
+    background-color:rgb(254, 255, 255);
+}
+.building{
+    background-image: url("https://www.w3schools.com/w3images/architect.jpg");
+    height:100vb;
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;  
+}
+.building >p{
+    color: white;
+    font-size:32px;
+    word-spacing: 5px;
+
+}
+.building >p >span{
+    background-color: black;
+    display: inline-block;
+    font-weight : semibold;
+    padding:7px;
+}
