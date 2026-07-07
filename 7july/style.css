@@ -1,0 +1,235 @@
+/* Base Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    color: #000;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ccf6f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.nav-logo, .nav-links a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    font-size: 15px;
+}
+
+.nav-links a:hover, .nav-logo:hover {
+    background-color: #ccc;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-top: 47px; /* Offset for standard nav height */
+}
+
+.hero img {
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 24px 48px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: #616161;
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+/* Layout Wrapper */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Grid Sections (About & Menu) */
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    padding: 64px 0;
+    align-items: center;
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.75;
+}
+
+.section-content h2 {
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.section-content .subtitle {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #616161;
+    letter-spacing: 5px;
+    margin-bottom: 32px;
+}
+
+.section-content p {
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.highlight-text {
+    font-size: 18px !important;
+}
+
+.highlight-text span {
+    background-color: #f1f1f1;
+    padding: 0 4px;
+}
+
+.muted-text {
+    color: #757575;
+}
+
+/* Menu Custom Styles */
+.menu-item {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #616161;
+    margin-bottom: 4px;
+}
+
+.menu-desc {
+    color: #757575;
+    font-size: 15px;
+}
+
+.price {
+    color: #757575;
+    font-size: 15px;
+}
+
+/* Clean Separator line */
+.separator {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 32px 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 64px 0;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    margin-bottom: 16px;
+}
+
+.contact-section p {
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.address {
+    color: #616161;
+}
+
+.contact-form {
+    margin-top: 32px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 16px 8px;
+    margin-bottom: 16px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.contact-form button {
+    background-color: #f1f1f1;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ccc;
+}
+
+/* Footer */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 32px;
+    font-size: 15px;
+    margin-top: 64px;
+}
+
+/* Responsive Rules for Mobile layout */
+@media (max-width: 768px) {
+    .grid-section {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    /* Revert order on mobile so text always matches layout logic */
+    .grid-section.reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .nav-links {
+        display: none; /* Simplifies navbar for small mobile viewports */
+    }
+}
